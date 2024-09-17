@@ -1,5 +1,6 @@
 function start() {
-    alert("Старт!")
+    let now = new Date(Date.now());
+    jQuery('#date').text(now.toISOString());
 }
 
 function pass_submit() {
