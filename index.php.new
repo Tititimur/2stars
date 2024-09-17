@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="globalStyles.css">
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.js"></script>
+        <script src="pass.js"></script>
+        <title>Дежурные 2 звёздочки лицей №52</title>
+    </head>
+    <body>
+        <ul>
+<?php
+$pass = $_GET['pw'];
+$ok = $pass == "35190";
+$names = Array(
+    "Лапутин Тимофей",
+    "Воронкова Полина",
+    "Кузьминова Арина",
+    "Волкова Мария",
+    "Мурсалов Тимур",
+    "Сергеев Григорий");
+for ($i = 0; $i < count($names); $i++) {
+    $name = $names[$i];
+    echo("<li>");
+    echo($name);
+    if($ok) echo(" <button>Сделать дежурным на сегодня</button>");
+    echo("</li>\n");
+}
+?>
+        </ul>
+        
+            <input id="pass" placeholder="password" type="password">
+            <!-- <label>
+                <input class="showPassword" type="checkbox" onclick="showPass()">
+            </label> -->
+            <button onclick="pass_submit()">Submit</button>
+        </div>
+    </body>
+</html>
