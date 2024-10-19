@@ -34,11 +34,11 @@ function pass_submit() {
     document.location.href="index.php?pw="+pass;
 }
 
-//function showPass() {
-//    let show = jQuery("#showPassword").is(':checked');
-//    if (show) {
-//        jQuery("#pass").attr('type','text');
-//    } else {
-//        jQuery("#pass").attr('type','password');
-//    }
-//}
+function showPass(checkbox, input) {
+    const check = document.getElementById(checkbox);
+    if (check.checked) {
+        document.getElementById(input).setAttribute("type", "text")
+    } else {
+        document.getElementById(input).setAttribute("type", "password")
+    }
+}
