@@ -24,7 +24,8 @@ function fillUsers() {
     for (var i = 0; i < count; i++) {
         let j = (i+plus) % count;
         let user = userList[j];
-        jQuery("#users").append('<li>' + user + '</li>');
+        let id = (i == 0)? "today": (i == 1)? "tomorrow": "";
+        jQuery("#users").append('<li id='+id+'>' + user + '</li>');
     }
 }
 
