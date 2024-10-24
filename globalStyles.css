@@ -1,6 +1,23 @@
+body {
+    background: black;
+    text-align: center;
+    align-content: center;
+}
 #today {
     color: Green;
 }
 #tomorrow {
     color: red
+}
+.avatar {
+    border: solid 2px #0b8a00;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+}
+.white {
+    color: white;
+}
+.center {
+    display: inline-block;
 }
